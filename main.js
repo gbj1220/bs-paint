@@ -7,7 +7,7 @@
  * You can mostly leave this section alone!
  * But if you want to change how wide the canvas is,
  * there are just two steps:
- * 
+ *
  * 1. Change the `gridWidth` value below.
  * 2. Change the `grid-template-rows` and
  * `grid-template-columns` to match.
@@ -24,6 +24,40 @@ while (count <= gridWidth * gridWidth) {
   canvas.appendChild(div);
   count++;
 }
+
+for (const color of document.querySelectorAll(".palette-color")) {
+  color.addEventListener('click', (event) => {
+    const brushSelection = document.querySelector(".current-brush")
+    //replace color 2 with what has been clicked in the event
+    brushSelection.classList.replace("current-brush", "color")
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // You probably should NOT do these in the order below.
 // That is, you probably should NOT do all the queries,
